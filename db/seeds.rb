@@ -16,6 +16,10 @@ movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
       	  {:title => 'The Incredibles', :rating => 'PG', :release_date => '5-Nov-2004'},
       	  {:title => 'Raiders of the Lost Ark', :rating => 'PG', :release_date => '12-Jun-1981'},
       	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
+ {:title => 'Star Wars', :rating => 'PG', :director => 'George Lucas', :release_date => '25-May-1977'},
+    {:title => 'Blade Runner', :rating => 'PG', :director  => 'Ridley Scott', :release_date => '25-Jun-1982'},
+    {:title => 'Alien ', :rating => 'R', :release_date => '25-May-1979'},
+    {:title => 'THX-1138', :rating => 'R', :director => 'George Lucas', :release_date => '11-Mar-1971'},
   	 ]
 
   Movie.delete_all

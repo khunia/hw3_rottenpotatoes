@@ -1,23 +1,28 @@
 # Add a declarative step here for populating the DB with movies.
 
-Given /the following movies exist/ do |movies_table|
+Given /^the following movies exist:$/ do |movies_table|
   movies_table.hashes.each do |movie|
+    Movie.create!(movie)
+    
     # each returned element will be a hash whose key is the table header.
     # you should arrange to add that movie to the database here.
-    #Movie.where(:title => movie[:title], :rating => movie[:rating], :release_date => movie[:release_date]).first_or_create
-    #puts movie
-    Movie.create(movie)
   end
-  #flunk "Unimplemented"
 end
 
-# Make sure that one string (regexp) occurs before or after another one
-#   on the same page
+
+Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
+   assert page.body =~ /#{arg1}.+Director.+#{arg2}/m
+   # express the regexp above with the code you wish you had
+end
+
+Then /^show me the page$/ do
+  save_and_open_page
+end
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
+  assert page.body =~ /#{e1}.+#{e2}/m
   #  ensure that that e1 occurs before e2.
-  #  page.content  is the entire content of the page as a string.
-  page.body.should =~ /#{e1}.*#{e2}/m
+  #  page.content  is the entire content of the page as a string.mo
 end
 
 # Make it easier to express checking or unchecking several boxes at once
@@ -25,48 +30,22 @@ end
 #  "When I check the following ratings: G"
 
 When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
+  if uncheck == "un"
+    rating_list.split(', ').each {|x| step %{I uncheck "ratings_#{x}"}}
+  else
+    rating_list.split(', ').each {|x| step %{I check "ratings_#{x}"}}
+  end
   # HINT: use String#split to split up the rating_list, then
   #   iterate over the ratings and reuse the "When I check..." or
   #   "When I uncheck..." steps in lines 89-95 of web_steps.rb
-  ratings_to_modify = rating_list.split(%r{[,\s]+})
-  if uncheck.nil?
-    puts "uncheck is not nil"
-    ratings_to_modify.each do |rating|
-      check("ratings_" + rating)
-    end
-  else 
-    puts "uncheck is nil"
-    ratings_to_modify.each do |rating|
-      uncheck("ratings_" + rating)
-    end
-  end
 end
 
-When /I (un)?check all of the ratings/ do |uncheck|
-  ratings_list = Movie.all_ratings
-  ratings_list.each do |rating|
-    if uncheck.nil?
-      puts "Checking rating: ratings_" + rating
-      check("ratings_" + rating)
-    else
-      puts "Unchecking rating: ratings_" + rating
-      uncheck("ratings_" + rating)
-    end
-  end
+Then /I should not see any of the movies/ do
+  rows = page.all('#movies tr').size - 1
+  assert rows == 0
 end
 
 Then /I should see all of the movies/ do
-  movie_count = Movie.count(:title)
-  puts "Total number of movies in database: #{movie_count}"
-  (page.all("table#movies tr").count - 1).should == movie_count
+  rows = page.all('#movies tr').size - 1
+  assert rows == Movie.count()
 end
-
-Then /I should see none of the movies/ do
-movie_count = Movie.count(:title)
-  puts "Total number of movies in database: #{movie_count}"
-#  (page.all("table#movies tr").count -1).should == 0   tutaj jest blad
-end
-
-#Then /I should see "([^"]+)" before "([^"]+)"/ do |first_item, second_item|
-#  page.all("table#movies") =~ /#{first_item}.*#{second_item}/
-#end

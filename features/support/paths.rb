@@ -14,13 +14,28 @@ module NavigationHelpers
     case page_name
 
     when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
-    when /^the movies page$/ then '/movies'
+    when /^the Create New Movie page$/ then '/movies/new'
+    when /^the details page$/ then '/movies/show'
+    when /^the Edit Existing Movie$/ then '/movies/edit'
+#    when /^the details page "(.*)"$/ then '/movies/show'
+#   edit_movies_path(movies.find_by_name($1))
+ 
+    when /^the home\s?page$/
+      '/'
+
+#    when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
+#    when /^the movies page$/ then '/movies'
+#    when /^the home  page$/ then '/movies'
+#    when /^the ?home\s?page$/ then '/movies'
+#    when /^the edit page$/ then '/movies'
+#     when /^the edit page for "Alien"$/ then '/movies'
+#     when /^the Details about "Alien"$/ then '/movies'  
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
+   when /^(.*)'s profile page$/i
+     user_profile_path(User.find_by_login($1))
 
     else
       begin
