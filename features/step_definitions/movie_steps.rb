@@ -40,7 +40,23 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   #   "When I uncheck..." steps in lines 89-95 of web_steps.rb
 end
 
+When /^I (un)?check all of the ratings$/ do | uncheck |
+  Movie.all_ratings.each do | rating  |
+    rating = "ratings_" + rating
+    if uncheck
+      uncheck(rating)
+    else
+      check(rating)
+    end
+  end
+end
+
 Then /I should not see any of the movies/ do
+  rows = page.all('#movies tr').size - 1
+  assert rows == 0
+end
+
+Then /I should see none of the movies/ do
   rows = page.all('#movies tr').size - 1
   assert rows == 0
 end

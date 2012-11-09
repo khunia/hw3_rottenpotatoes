@@ -1,11 +1,16 @@
 class MoviesController < ApplicationController
 
   def show
-    @id = params[:id] # retrieve movie ID from URI route
-    @movie = Movie.find(@id) # look up movie by unique ID
-    @director = @movie.director
-    # will render app/views/movies/show.<extension> by default
+    begin
+     @id = params[:id] # retrieve movie ID from URI route
+     @movie = Movie.find(params[:id])
+     @director = @movie.director
+    rescue ActiveRecord::RecordNotFound
+ #     return flash[:warning] = 'Review must be for an existing movie.'
+      redirect_to movies_path
+     end
   end
+
 
   def index
     sort = params[:sort] || session[:sort]
@@ -35,21 +40,36 @@ class MoviesController < ApplicationController
     # default: render 'new' template
   end
 
-  def create
-    @movie = Movie.create!(params[:movie])
-    flash[:notice] = "#{@movie.title} was successfully created."
-    redirect_to movies_path
+  def create 
+   if params[:commit] == 'Cancel'
+     redirect_to movies_path
+   else
+     @movie = Movie.create!(params[:movie])
+     flash[:notice] = "#{@movie.title} was successfully created."
+     redirect_to movies_path
+   end 
   end
 
+
   def edit
-    @movie = Movie.find params[:id]
+    begin
+     @id = params[:id] # retrieve movie ID from URI route
+     @movie = Movie.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+ #     return flash[:warning] = 'Review must be for an existing movie.'
+      redirect_to movies_path
+     end
   end
 
   def update
+   if params[:commit] == 'Cancel'
+     redirect_to movies_path
+   else
     @movie = Movie.find params[:id]
     @movie.update_attributes!(params[:movie])
     flash[:notice] = "#{@movie.title} was successfully updated."
     redirect_to movie_path(@movie)
+   end
   end
 
   def destroy
@@ -58,6 +78,10 @@ class MoviesController < ApplicationController
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
   end
+
+    def cancel
+      redirect_to movie_path(@movie)
+    end
   
   def similar
     @id = params[:movie_id]

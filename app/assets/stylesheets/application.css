@@ -10,6 +10,12 @@ div#main {
   margin: 0;
   padding: 0 20px 20px;
 }
+a  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: yellow;
+        text-decoration: none;
+      }
 a {
   background: transparent;
   color: maroon;
@@ -39,11 +45,18 @@ table#movies {
   width: 100%;
   border-bottom: 2px solid black;
 }
+table#movie  {color: #03c}
+      a:hover {
+        background-color: #03c;
+        color: yellow;
+        text-decoration: none;
+      }
 table#movies th {
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
+
 table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
