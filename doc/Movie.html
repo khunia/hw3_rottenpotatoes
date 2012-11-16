@@ -74,10 +74,6 @@
     
     <li><a href="#method-c-similar_directors">::similar_directors</a>
     
-    <li><a href="#method-i-map_tmdb">#map_tmdb</a>
-    
-    <li><a href="#method-i-update_from_tmdb_id">#update_from_tmdb_id</a>
-    
   </ul>
 </nav>
 
@@ -221,7 +217,7 @@
 
         <div class="method-description">
           
-          
+          <p>validates_uniqueness_of :tmdb_id, :imdb_id</p>
           
 
           
@@ -271,79 +267,6 @@
 
     
     </section><!-- public-class-method-details -->
-  
-     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
-      <h3 class="section-header">Public Instance Methods</h3>
-
-    
-      <div id="method-i-map_tmdb" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">map_tmdb</span><span
-            class="method-args">(tm_movie)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="map_tmdb-source">
-            <pre><span class="ruby-comment"># File app/models/movie.rb, line 18</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">map_tmdb</span>(<span class="ruby-identifier">tm_movie</span>)
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">title</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">name</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">tmdb_id</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">id</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">imdb_id</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">imdb_id</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">tmdb_url</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">url</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">released</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">released</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">release_year</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">released</span>.<span class="ruby-identifier">year</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">overview</span> = <span class="ruby-identifier">tm_movie</span>.<span class="ruby-identifier">overview</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- map_tmdb-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- map_tmdb-method -->
-
-    
-      <div id="method-i-update_from_tmdb_id" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">update_from_tmdb_id</span><span
-            class="method-args">(tmdb_id)</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="update_from_tmdb_id-source">
-            <pre><span class="ruby-comment"># File app/models/movie.rb, line 13</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">update_from_tmdb_id</span>(<span class="ruby-identifier">tmdb_id</span>)
-  <span class="ruby-identifier">tm_movie</span> = <span class="ruby-constant">TmdbMovie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:id</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">tmdb_id</span>)
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">map_tmdb</span>(<span class="ruby-identifier">tm_movie</span>)
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- update_from_tmdb_id-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- update_from_tmdb_id-method -->
-
-    
-    </section><!-- public-instance-method-details -->
   
   </section><!-- 5Buntitled-5D -->
 

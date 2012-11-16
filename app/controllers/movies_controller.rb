@@ -89,13 +89,13 @@ class MoviesController < ApplicationController
       @tmdbmovies = TmdbMovie.find(:title => params[:search_terms],:expand_results => false)
   end
 
-
 def movie_add
-
-  logger.warn("========#{tmdbmovie.name}=============")
-#  render :nothing => true
-
-end
+   logger.warn("========#{params.inspect}=============")
+   @movie = Movie.new(params[:movie])
+   @movie.save
+   flash[:notice] = "Successfully Created."
+   redirect_to @movie
+  end
 
 
 

@@ -425,13 +425,14 @@
 
           
           <div class="method-source-code" id="movie_add-source">
-            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 93</span>
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 92</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">movie_add</span>
-
-  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;========#{tmdbmovie.name}=============&quot;</span>)
-<span class="ruby-comment">#  render :nothing =&gt; true</span>
-
-<span class="ruby-keyword">end</span></pre>
+   <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;========#{params.inspect}=============&quot;</span>)
+   <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:movie</span>])
+   <span class="ruby-ivar">@movie</span>.<span class="ruby-identifier">save</span>
+   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-string">&quot;Successfully Created.&quot;</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@movie</span>
+  <span class="ruby-keyword">end</span></pre>
           </div><!-- movie_add-source -->
           
         </div>

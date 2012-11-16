@@ -2,20 +2,24 @@
   %thead
     %th Movie Title
     %th Rating
+    %th Grade
     %th Movie released
     %th More info
-    %th Add new movie
+    %th Add to movies
   %tbody
   - @tmdbmovies.each do |tmdbmovie|
     %tr
       %td 
         =tmdbmovie.name
       %td
-        =tmdbmovie.certification
+        =tmdbmovie.certification 
+      %td
+        =tmdbmovie.rating
       %td
         =tmdbmovie.released
       %td
         =tmdbmovie.overview
       %td
-        = link_to "Add", movie_add_path(tmdbmovie)
+        =button_to "Add", movie_add_url("movie[description]" => tmdbmovie.overview, "movie[release_date]" => tmdbmovie.released, 			"movie[title]" => tmdbmovie.name, "movie[rating]" => tmdbmovie.certification )
+
 	
