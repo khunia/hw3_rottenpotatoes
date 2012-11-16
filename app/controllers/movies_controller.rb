@@ -82,7 +82,23 @@ class MoviesController < ApplicationController
     def cancel
       redirect_to movie_path(@movie)
     end
-  
+
+  def search_tmdb
+      Tmdb.api_key = "f0e3f36631f1fbb66d480a4b646b1993"
+      Tmdb.default_language = "en"
+      @tmdbmovies = TmdbMovie.find(:title => params[:search_terms],:expand_results => false)
+  end
+
+
+def movie_add
+
+  logger.warn("========#{tmdbmovie.name}=============")
+#  render :nothing => true
+
+end
+
+
+
   def similar
     @id = params[:movie_id]
     @movie = Movie.find(@id)

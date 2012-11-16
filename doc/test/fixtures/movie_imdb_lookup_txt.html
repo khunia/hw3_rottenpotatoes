@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>movie_imdb_lookup - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../../Gemfile~.html">Gemfile~</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+    <li class="file"><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../../public/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="../../spec/controllers/Untitled Document~.html">Untitled Document~</a>
+  
+    <li class="file"><a href="../../spec/models/Untitled Document~.html">Untitled Document~</a>
+  
+    <li class="file"><a href="../../test/fixtures/blank_result_txt.html">blank_result</a>
+  
+    <li class="file"><a href="../../test/fixtures/example_com_txt.html">example_com</a>
+  
+    <li class="file"><a href="../../test/fixtures/incorrect_api_url_txt.html">incorrect_api_url</a>
+  
+    <li class="file"><a href="../../test/fixtures/movie_browse_txt.html">movie_browse</a>
+  
+    <li class="file"><a href="../../test/fixtures/movie_get_info_txt.html">movie_get_info</a>
+  
+    <li class="file"><a href="../../test/fixtures/movie_imdb_lookup_txt.html">movie_imdb_lookup</a>
+  
+    <li class="file"><a href="../../test/fixtures/movie_search_txt.html">movie_search</a>
+  
+    <li class="file"><a href="../../test/fixtures/person_get_info_txt.html">person_get_info</a>
+  
+    <li class="file"><a href="../../test/fixtures/person_search_txt.html">person_search</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Test.html">Test</a>
+  
+    <li><a href="../../Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="../../Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="../../Rottenpotatoes.html">Rottenpotatoes</a>
+  
+    <li><a href="../../Rottenpotatoes/Application.html">Rottenpotatoes::Application</a>
+  
+    <li><a href="../../Ruby.html">Ruby</a>
+  
+    <li><a href="../../Ruby/Tmdb.html">Ruby::Tmdb</a>
+  
+    <li><a href="../../AddDirectorToMovie.html">AddDirectorToMovie</a>
+  
+    <li><a href="../../AddMoreMovies.html">AddMoreMovies</a>
+  
+    <li><a href="../../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../../CreateMovies.html">CreateMovies</a>
+  
+    <li><a href="../../HtmlSelectorsHelpers.html">HtmlSelectorsHelpers</a>
+  
+    <li><a href="../../Movie.html">Movie</a>
+  
+    <li><a href="../../MoviesController.html">MoviesController</a>
+  
+    <li><a href="../../MoviesHelper.html">MoviesHelper</a>
+  
+    <li><a href="../../NavigationHelpers.html">NavigationHelpers</a>
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../Tmdb.html">Tmdb</a>
+  
+    <li><a href="../../TmdbCast.html">TmdbCast</a>
+  
+    <li><a href="../../TmdbCastTest.html">TmdbCastTest</a>
+  
+    <li><a href="../../TmdbMovie.html">TmdbMovie</a>
+  
+    <li><a href="../../TmdbMovieTest.html">TmdbMovieTest</a>
+  
+    <li><a href="../../TmdbTest.html">TmdbTest</a>
+  
+    <li><a href="../../WithinHelpers.html">WithinHelpers</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>HTTP/1.1 200 OK Server: nginx Date: Mon, 23 Aug 2010 16:44:10 GMT
+Content-Type: text/json; charset=utf-8 Transfer-Encoding: chunked
+Connection: keep-alive Keep-Alive: timeout=20 Status: 200 OK Cache-Control:
+public, max-age=21600 X-Varnish: 2542123184 Age: 0 Via: 1.1 varnish
+X-Cache: MISS</p>
+<dl class="rdoc-list label-list"><dt>{“popularity”:3,“translated”:true,“adult”:false,“language”:“en”,“original_name”:“Sin City”,“name”:“Sin City”,“alternative_name”:null,“movie_type”:“movie”,“id”:187,“imdb_id”:“tt0401792”,“url”:“<a href="http://www.themoviedb.org/movie/187","votes":62,"rating":7.0,"certification":"R","overview":"The">www.themoviedb.org/movie/187”,“votes”:62,“rating”:7.0,“certification”:“R”,“overview”:“The</a> first of three films based on the beautiful comic world of Frank Miller. Sin City depicts the comic book almost page for page with its heavy contrast black and white extremely violent and graphic imagery. Sin City is set in a dangerous and dark Basin City where corruption, sex and violence is everyday <a href="{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/14d/4bd5a73e017a3c2e7800014d/sin-city-original.jpg","id":"4bd5a73e017a3c2e7800014d"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/14d/4bd5a73e017a3c2e7800014d/sin-city-poster.jpg","id":"4bd5a73e017a3c2e7800014d"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/14d/4bd5a73e017a3c2e7800014d/sin-city-thumb.jpg","id":"4bd5a73e017a3c2e7800014d"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/630/4bc904d7017a3c57fe001630/sin-city-original.jpg","id":"4bc904d7017a3c57fe001630"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/630/4bc904d7017a3c57fe001630/sin-city-poster.jpg","id":"4bc904d7017a3c57fe001630"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/630/4bc904d7017a3c57fe001630/sin-city-thumb.jpg","id":"4bc904d7017a3c57fe001630"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/688/4bc904e8017a3c57fe001688/sin-city-original.jpg","id":"4bc904e8017a3c57fe001688"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/688/4bc904e8017a3c57fe001688/sin-city-poster.jpg","id":"4bc904e8017a3c57fe001688"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/688/4bc904e8017a3c57fe001688/sin-city-thumb.jpg","id":"4bc904e8017a3c57fe001688"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/61c/4bc904d2017a3c57fe00161c/sin-city-original.jpg","id":"4bc904d2017a3c57fe00161c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/61c/4bc904d2017a3c57fe00161c/sin-city-poster.jpg","id":"4bc904d2017a3c57fe00161c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/61c/4bc904d2017a3c57fe00161c/sin-city-thumb.jpg","id":"4bc904d2017a3c57fe00161c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/614/4bc904d1017a3c57fe001614/sin-city-original.jpg","id":"4bc904d1017a3c57fe001614"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/614/4bc904d1017a3c57fe001614/sin-city-poster.jpg","id":"4bc904d1017a3c57fe001614"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/614/4bc904d1017a3c57fe001614/sin-city-thumb.jpg","id":"4bc904d1017a3c57fe001614"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/618/4bc904d2017a3c57fe001618/sin-city-original.jpg","id":"4bc904d2017a3c57fe001618"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/618/4bc904d2017a3c57fe001618/sin-city-poster.jpg","id":"4bc904d2017a3c57fe001618"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/618/4bc904d2017a3c57fe001618/sin-city-thumb.jpg","id":"4bc904d2017a3c57fe001618"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/620/4bc904d5017a3c57fe001620/sin-city-original.jpg","id":"4bc904d5017a3c57fe001620"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/620/4bc904d5017a3c57fe001620/sin-city-poster.jpg","id":"4bc904d5017a3c57fe001620"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/620/4bc904d5017a3c57fe001620/sin-city-thumb.jpg","id":"4bc904d5017a3c57fe001620"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/624/4bc904d5017a3c57fe001624/sin-city-original.jpg","id":"4bc904d5017a3c57fe001624"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/624/4bc904d5017a3c57fe001624/sin-city-poster.jpg","id":"4bc904d5017a3c57fe001624"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/624/4bc904d5017a3c57fe001624/sin-city-thumb.jpg","id":"4bc904d5017a3c57fe001624"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/648/4bc904dc017a3c57fe001648/sin-city-original.jpg","id":"4bc904dc017a3c57fe001648"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/648/4bc904dc017a3c57fe001648/sin-city-poster.jpg","id":"4bc904dc017a3c57fe001648"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/648/4bc904dc017a3c57fe001648/sin-city-thumb.jpg","id":"4bc904dc017a3c57fe001648"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/668/4bc904e1017a3c57fe001668/sin-city-original.jpg","id":"4bc904e1017a3c57fe001668"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/668/4bc904e1017a3c57fe001668/sin-city-poster.jpg","id":"4bc904e1017a3c57fe001668"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/668/4bc904e1017a3c57fe001668/sin-city-thumb.jpg","id":"4bc904e1017a3c57fe001668"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/664/4bc904e1017a3c57fe001664/sin-city-original.jpg","id":"4bc904e1017a3c57fe001664"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/664/4bc904e1017a3c57fe001664/sin-city-poster.jpg","id":"4bc904e1017a3c57fe001664"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/664/4bc904e1017a3c57fe001664/sin-city-thumb.jpg","id":"4bc904e1017a3c57fe001664"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/660/4bc904e0017a3c57fe001660/sin-city-original.jpg","id":"4bc904e0017a3c57fe001660"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/660/4bc904e0017a3c57fe001660/sin-city-poster.jpg","id":"4bc904e0017a3c57fe001660"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/660/4bc904e0017a3c57fe001660/sin-city-thumb.jpg","id":"4bc904e0017a3c57fe001660"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/65c/4bc904e0017a3c57fe00165c/sin-city-original.jpg","id":"4bc904e0017a3c57fe00165c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/65c/4bc904e0017a3c57fe00165c/sin-city-poster.jpg","id":"4bc904e0017a3c57fe00165c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/65c/4bc904e0017a3c57fe00165c/sin-city-thumb.jpg","id":"4bc904e0017a3c57fe00165c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/658/4bc904de017a3c57fe001658/sin-city-original.jpg","id":"4bc904de017a3c57fe001658"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/658/4bc904de017a3c57fe001658/sin-city-poster.jpg","id":"4bc904de017a3c57fe001658"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/658/4bc904de017a3c57fe001658/sin-city-thumb.jpg","id":"4bc904de017a3c57fe001658"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/654/4bc904dd017a3c57fe001654/sin-city-original.jpg","id":"4bc904dd017a3c57fe001654"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/654/4bc904dd017a3c57fe001654/sin-city-poster.jpg","id":"4bc904dd017a3c57fe001654"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/654/4bc904dd017a3c57fe001654/sin-city-thumb.jpg","id":"4bc904dd017a3c57fe001654"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/67c/4bc904e5017a3c57fe00167c/sin-city-original.jpg","id":"4bc904e5017a3c57fe00167c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/67c/4bc904e5017a3c57fe00167c/sin-city-poster.jpg","id":"4bc904e5017a3c57fe00167c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/67c/4bc904e5017a3c57fe00167c/sin-city-thumb.jpg","id":"4bc904e5017a3c57fe00167c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/64c/4bc904dc017a3c57fe00164c/sin-city-original.jpg","id":"4bc904dc017a3c57fe00164c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/64c/4bc904dc017a3c57fe00164c/sin-city-poster.jpg","id":"4bc904dc017a3c57fe00164c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/64c/4bc904dc017a3c57fe00164c/sin-city-thumb.jpg","id":"4bc904dc017a3c57fe00164c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/66c/4bc904e1017a3c57fe00166c/sin-city-original.jpg","id":"4bc904e1017a3c57fe00166c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/66c/4bc904e1017a3c57fe00166c/sin-city-poster.jpg","id":"4bc904e1017a3c57fe00166c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/66c/4bc904e1017a3c57fe00166c/sin-city-thumb.jpg","id":"4bc904e1017a3c57fe00166c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/644/4bc904db017a3c57fe001644/sin-city-original.jpg","id":"4bc904db017a3c57fe001644"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/644/4bc904db017a3c57fe001644/sin-city-poster.jpg","id":"4bc904db017a3c57fe001644"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/644/4bc904db017a3c57fe001644/sin-city-thumb.jpg","id":"4bc904db017a3c57fe001644"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/640/4bc904db017a3c57fe001640/sin-city-original.jpg","id":"4bc904db017a3c57fe001640"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/640/4bc904db017a3c57fe001640/sin-city-poster.jpg","id":"4bc904db017a3c57fe001640"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/640/4bc904db017a3c57fe001640/sin-city-thumb.jpg","id":"4bc904db017a3c57fe001640"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/63c/4bc904d8017a3c57fe00163c/sin-city-original.jpg","id":"4bc904d8017a3c57fe00163c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/63c/4bc904d8017a3c57fe00163c/sin-city-poster.jpg","id":"4bc904d8017a3c57fe00163c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/63c/4bc904d8017a3c57fe00163c/sin-city-thumb.jpg","id":"4bc904d8017a3c57fe00163c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/638/4bc904d8017a3c57fe001638/sin-city-original.jpg","id":"4bc904d8017a3c57fe001638"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/638/4bc904d8017a3c57fe001638/sin-city-poster.jpg","id":"4bc904d8017a3c57fe001638"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/638/4bc904d8017a3c57fe001638/sin-city-thumb.jpg","id":"4bc904d8017a3c57fe001638"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/634/4bc904d7017a3c57fe001634/sin-city-original.jpg","id":"4bc904d7017a3c57fe001634"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/634/4bc904d7017a3c57fe001634/sin-city-poster.jpg","id":"4bc904d7017a3c57fe001634"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/634/4bc904d7017a3c57fe001634/sin-city-thumb.jpg","id":"4bc904d7017a3c57fe001634"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/680/4bc904e5017a3c57fe001680/sin-city-original.jpg","id":"4bc904e5017a3c57fe001680"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/680/4bc904e5017a3c57fe001680/sin-city-poster.jpg","id":"4bc904e5017a3c57fe001680"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/680/4bc904e5017a3c57fe001680/sin-city-thumb.jpg","id":"4bc904e5017a3c57fe001680"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/62c/4bc904d6017a3c57fe00162c/sin-city-original.jpg","id":"4bc904d6017a3c57fe00162c"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/62c/4bc904d6017a3c57fe00162c/sin-city-poster.jpg","id":"4bc904d6017a3c57fe00162c"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/62c/4bc904d6017a3c57fe00162c/sin-city-thumb.jpg","id":"4bc904d6017a3c57fe00162c"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/628/4bc904d6017a3c57fe001628/sin-city-original.jpg","id":"4bc904d6017a3c57fe001628"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/628/4bc904d6017a3c57fe001628/sin-city-poster.jpg","id":"4bc904d6017a3c57fe001628"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/628/4bc904d6017a3c57fe001628/sin-city-thumb.jpg","id":"4bc904d6017a3c57fe001628"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/670/4bc904e4017a3c57fe001670/sin-city-original.jpg","id":"4bc904e4017a3c57fe001670"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/670/4bc904e4017a3c57fe001670/sin-city-poster.jpg","id":"4bc904e4017a3c57fe001670"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/670/4bc904e4017a3c57fe001670/sin-city-thumb.jpg","id":"4bc904e4017a3c57fe001670"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/674/4bc904e4017a3c57fe001674/sin-city-original.jpg","id":"4bc904e4017a3c57fe001674"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/674/4bc904e4017a3c57fe001674/sin-city-poster.jpg","id":"4bc904e4017a3c57fe001674"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/674/4bc904e4017a3c57fe001674/sin-city-thumb.jpg","id":"4bc904e4017a3c57fe001674"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/684/4bc904e8017a3c57fe001684/sin-city-original.jpg","id":"4bc904e8017a3c57fe001684"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/684/4bc904e8017a3c57fe001684/sin-city-poster.jpg","id":"4bc904e8017a3c57fe001684"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/684/4bc904e8017a3c57fe001684/sin-city-thumb.jpg","id":"4bc904e8017a3c57fe001684"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/678/4bc904e5017a3c57fe001678/sin-city-original.jpg","id":"4bc904e5017a3c57fe001678"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/678/4bc904e5017a3c57fe001678/sin-city-poster.jpg","id":"4bc904e5017a3c57fe001678"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/678/4bc904e5017a3c57fe001678/sin-city-thumb.jpg","id":"4bc904e5017a3c57fe001678"}},{"image":{"type":"backdrop","size":"original","height":1080,"width":1920,"url":"http://hwcdn.themoviedb.org/backdrops/650/4bc904dd017a3c57fe001650/sin-city-original.jpg","id":"4bc904dd017a3c57fe001650"}},{"image":{"type":"backdrop","size":"poster","height":439,"width":780,"url":"http://hwcdn.themoviedb.org/backdrops/650/4bc904dd017a3c57fe001650/sin-city-poster.jpg","id":"4bc904dd017a3c57fe001650"}},{"image":{"type":"backdrop","size":"thumb","height":169,"width":300,"url":"http://hwcdn.themoviedb.org/backdrops/650/4bc904dd017a3c57fe001650/sin-city-thumb.jpg","id":"4bc904dd017a3c57fe001650"}}">life.”,“released”:“2005-04-01”,“runtime”:124,“genres”:[{“type”:“genre”,“url”:“http://themoviedb.org/genre/crime”,“name”:“Crime”,“id”:80},{“type”:“genre”,“url”:“http://themoviedb.org/genre/drama”,“name”:“Drama”,“id”:18},{“type”:“genre”,“url”:“http://themoviedb.org/genre/thriller”,“name”:“Thriller”,“id”:53}],“posters”:[{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2124,“url”:“http://hwcdn.themoviedb.org/posters/68c/4bc904e9017a3c57fe00168c/sin-city-original.jpg”,“id”:“4bc904e9017a3c57fe00168c”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:706,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/68c/4bc904e9017a3c57fe00168c/sin-city-mid.jpg”,“id”:“4bc904e9017a3c57fe00168c”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:261,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/68c/4bc904e9017a3c57fe00168c/sin-city-cover.jpg”,“id”:“4bc904e9017a3c57fe00168c”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:130,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/68c/4bc904e9017a3c57fe00168c/sin-city-thumb.jpg”,“id”:“4bc904e9017a3c57fe00168c”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2014,“url”:“http://hwcdn.themoviedb.org/posters/6a5/4bc904f1017a3c57fe0016a5/sin-city-original.jpg”,“id”:“4bc904f1017a3c57fe0016a5”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:745,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/6a5/4bc904f1017a3c57fe0016a5/sin-city-mid.jpg”,“id”:“4bc904f1017a3c57fe0016a5”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:276,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/6a5/4bc904f1017a3c57fe0016a5/sin-city-cover.jpg”,“id”:“4bc904f1017a3c57fe0016a5”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:137,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/6a5/4bc904f1017a3c57fe0016a5/sin-city-thumb.jpg”,“id”:“4bc904f1017a3c57fe0016a5”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:2802,“width”:946,“url”:“http://hwcdn.themoviedb.org/posters/06e/4c55d9087b9aa151f700006e/sin-city-original.jpg”,“id”:“4c55d9087b9aa151f700006e”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:1481,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/06e/4c55d9087b9aa151f700006e/sin-city-mid.jpg”,“id”:“4c55d9087b9aa151f700006e”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:548,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/06e/4c55d9087b9aa151f700006e/sin-city-cover.jpg”,“id”:“4c55d9087b9aa151f700006e”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:273,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/06e/4c55d9087b9aa151f700006e/sin-city-thumb.jpg”,“id”:“4c55d9087b9aa151f700006e”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:759,“width”:570,“url”:“http://hwcdn.themoviedb.org/posters/6aa/4bc904f4017a3c57fe0016aa/sin-city-original.png”,“id”:“4bc904f4017a3c57fe0016aa”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:666,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/6aa/4bc904f4017a3c57fe0016aa/sin-city-mid.png”,“id”:“4bc904f4017a3c57fe0016aa”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:246,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/6aa/4bc904f4017a3c57fe0016aa/sin-city-cover.png”,“id”:“4bc904f4017a3c57fe0016aa”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:122,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/6aa/4bc904f4017a3c57fe0016aa/sin-city-thumb.png”,“id”:“4bc904f4017a3c57fe0016aa”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3648,“width”:2594,“url”:“http://hwcdn.themoviedb.org/posters/041/4c55d9417b9aa151f2000041/sin-city-original.jpg”,“id”:“4c55d9417b9aa151f2000041”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:703,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/041/4c55d9417b9aa151f2000041/sin-city-mid.jpg”,“id”:“4c55d9417b9aa151f2000041”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:260,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/041/4c55d9417b9aa151f2000041/sin-city-cover.jpg”,“id”:“4c55d9417b9aa151f2000041”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:129,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/041/4c55d9417b9aa151f2000041/sin-city-thumb.jpg”,“id”:“4c55d9417b9aa151f2000041”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2027,“url”:“http://hwcdn.themoviedb.org/posters/6a0/4bc904ef017a3c57fe0016a0/sin-city-original.jpg”,“id”:“4bc904ef017a3c57fe0016a0”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:740,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/6a0/4bc904ef017a3c57fe0016a0/sin-city-mid.jpg”,“id”:“4bc904ef017a3c57fe0016a0”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:274,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/6a0/4bc904ef017a3c57fe0016a0/sin-city-cover.jpg”,“id”:“4bc904ef017a3c57fe0016a0”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:136,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/6a0/4bc904ef017a3c57fe0016a0/sin-city-thumb.jpg”,“id”:“4bc904ef017a3c57fe0016a0”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2024,“url”:“http://hwcdn.themoviedb.org/posters/69b/4bc904ee017a3c57fe00169b/sin-city-original.jpg”,“id”:“4bc904ee017a3c57fe00169b”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:741,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/69b/4bc904ee017a3c57fe00169b/sin-city-mid.jpg”,“id”:“4bc904ee017a3c57fe00169b”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:274,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/69b/4bc904ee017a3c57fe00169b/sin-city-cover.jpg”,“id”:“4bc904ee017a3c57fe00169b”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:136,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/69b/4bc904ee017a3c57fe00169b/sin-city-thumb.jpg”,“id”:“4bc904ee017a3c57fe00169b”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2032,“url”:“http://hwcdn.themoviedb.org/posters/696/4bc904eb017a3c57fe001696/sin-city-original.jpg”,“id”:“4bc904eb017a3c57fe001696”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:738,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/696/4bc904eb017a3c57fe001696/sin-city-mid.jpg”,“id”:“4bc904eb017a3c57fe001696”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:273,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/696/4bc904eb017a3c57fe001696/sin-city-cover.jpg”,“id”:“4bc904eb017a3c57fe001696”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:136,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/696/4bc904eb017a3c57fe001696/sin-city-thumb.jpg”,“id”:“4bc904eb017a3c57fe001696”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:3000,“width”:2025,“url”:“http://hwcdn.themoviedb.org/posters/691/4bc904ea017a3c57fe001691/sin-city-original.jpg”,“id”:“4bc904ea017a3c57fe001691”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:741,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/691/4bc904ea017a3c57fe001691/sin-city-mid.jpg”,“id”:“4bc904ea017a3c57fe001691”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:274,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/691/4bc904ea017a3c57fe001691/sin-city-cover.jpg”,“id”:“4bc904ea017a3c57fe001691”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:136,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/691/4bc904ea017a3c57fe001691/sin-city-thumb.jpg”,“id”:“4bc904ea017a3c57fe001691”}},{“image”:{“type”:“poster”,“size”:“original”,“height”:1450,“width”:1023,“url”:“http://hwcdn.themoviedb.org/posters/9c7/4c6fef5f7b9aa13ab60009c7/sin-city-original.jpg”,“id”:“4c6fef5f7b9aa13ab60009c7”}},{“image”:{“type”:“poster”,“size”:“mid”,“height”:709,“width”:500,“url”:“http://hwcdn.themoviedb.org/posters/9c7/4c6fef5f7b9aa13ab60009c7/sin-city-mid.jpg”,“id”:“4c6fef5f7b9aa13ab60009c7”}},{“image”:{“type”:“poster”,“size”:“cover”,“height”:262,“width”:185,“url”:“http://hwcdn.themoviedb.org/posters/9c7/4c6fef5f7b9aa13ab60009c7/sin-city-cover.jpg”,“id”:“4c6fef5f7b9aa13ab60009c7”}},{“image”:{“type”:“poster”,“size”:“thumb”,“height”:130,“width”:92,“url”:“http://hwcdn.themoviedb.org/posters/9c7/4c6fef5f7b9aa13ab60009c7/sin-city-thumb.jpg”,“id”:“4c6fef5f7b9aa13ab60009c7”}}],“backdrops”:</a> 15:23:12“}
+<dd></dd></dl>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

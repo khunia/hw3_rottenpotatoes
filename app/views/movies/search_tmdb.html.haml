@@ -1,0 +1,21 @@
+%table.table
+  %thead
+    %th Movie Title
+    %th Rating
+    %th Movie released
+    %th More info
+    %th Add new movie
+  %tbody
+  - @tmdbmovies.each do |tmdbmovie|
+    %tr
+      %td 
+        =tmdbmovie.name
+      %td
+        =tmdbmovie.certification
+      %td
+        =tmdbmovie.released
+      %td
+        =tmdbmovie.overview
+      %td
+        = link_to "Add", movie_add_path(tmdbmovie)
+	

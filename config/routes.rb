@@ -1,10 +1,10 @@
 Rottenpotatoes::Application.routes.draw do
-  resources :movies
-  # map '/' to be a redirect to '/movies'
+  resources :movies 
+  post '/movies/search_tmdb'
   root :to => redirect('/movies')
-  resources :movies do
+  match "movie_add" => "movies#movie_add", :as => "movie_add" 
+  
+resources :movies do
     match "similar" => "movies#similar"
   end
 end
-
-

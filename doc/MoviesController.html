@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class MoviesController - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/movies_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-cancel">#cancel</a>
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-movie_add">#movie_add</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-search_tmdb">#search_tmdb</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-similar">#similar</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="./Gemfile~.html">Gemfile~</a>
+  
+    <li class="file"><a href="./README.html">README</a>
+  
+    <li class="file"><a href="./Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="./public/robots_txt.html">robots</a>
+  
+    <li class="file"><a href="./spec/controllers/Untitled Document~.html">Untitled Document~</a>
+  
+    <li class="file"><a href="./spec/models/Untitled Document~.html">Untitled Document~</a>
+  
+    <li class="file"><a href="./test/fixtures/blank_result_txt.html">blank_result</a>
+  
+    <li class="file"><a href="./test/fixtures/example_com_txt.html">example_com</a>
+  
+    <li class="file"><a href="./test/fixtures/incorrect_api_url_txt.html">incorrect_api_url</a>
+  
+    <li class="file"><a href="./test/fixtures/movie_browse_txt.html">movie_browse</a>
+  
+    <li class="file"><a href="./test/fixtures/movie_get_info_txt.html">movie_get_info</a>
+  
+    <li class="file"><a href="./test/fixtures/movie_imdb_lookup_txt.html">movie_imdb_lookup</a>
+  
+    <li class="file"><a href="./test/fixtures/movie_search_txt.html">movie_search</a>
+  
+    <li class="file"><a href="./test/fixtures/person_get_info_txt.html">person_get_info</a>
+  
+    <li class="file"><a href="./test/fixtures/person_search_txt.html">person_search</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./Test.html">Test</a>
+  
+    <li><a href="./Test/Unit.html">Test::Unit</a>
+  
+    <li><a href="./Test/Unit/TestCase.html">Test::Unit::TestCase</a>
+  
+    <li><a href="./Rottenpotatoes.html">Rottenpotatoes</a>
+  
+    <li><a href="./Rottenpotatoes/Application.html">Rottenpotatoes::Application</a>
+  
+    <li><a href="./Ruby.html">Ruby</a>
+  
+    <li><a href="./Ruby/Tmdb.html">Ruby::Tmdb</a>
+  
+    <li><a href="./AddDirectorToMovie.html">AddDirectorToMovie</a>
+  
+    <li><a href="./AddMoreMovies.html">AddMoreMovies</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CreateMovies.html">CreateMovies</a>
+  
+    <li><a href="./HtmlSelectorsHelpers.html">HtmlSelectorsHelpers</a>
+  
+    <li><a href="./Movie.html">Movie</a>
+  
+    <li><a href="./MoviesController.html">MoviesController</a>
+  
+    <li><a href="./MoviesHelper.html">MoviesHelper</a>
+  
+    <li><a href="./NavigationHelpers.html">NavigationHelpers</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Tmdb.html">Tmdb</a>
+  
+    <li><a href="./TmdbCast.html">TmdbCast</a>
+  
+    <li><a href="./TmdbCastTest.html">TmdbCastTest</a>
+  
+    <li><a href="./TmdbMovie.html">TmdbMovie</a>
+  
+    <li><a href="./TmdbMovieTest.html">TmdbMovieTest</a>
+  
+    <li><a href="./TmdbTest.html">TmdbTest</a>
+  
+    <li><a href="./WithinHelpers.html">WithinHelpers</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MoviesController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-cancel" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cancel</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cancel-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cancel</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movie_path</span>(<span class="ruby-ivar">@movie</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cancel-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cancel-method -->
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 43</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span> 
+ <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:commit</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'Cancel'</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+ <span class="ruby-keyword">else</span>
+   <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">create!</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:movie</span>])
+   <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;#{@movie.title} was successfully created.&quot;</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+ <span class="ruby-keyword">end</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+  <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+  <span class="ruby-ivar">@movie</span>.<span class="ruby-identifier">destroy</span>
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;Movie '#{@movie.title}' deleted.&quot;</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 54</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+   <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] <span class="ruby-comment"># retrieve movie ID from URI route</span>
+    <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotFound</span>
+<span class="ruby-comment">#     return flash[:warning] = 'Review must be for an existing movie.'</span>
+     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+    <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-identifier">sort</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:sort</span>]
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">sort</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'title'</span>
+    <span class="ruby-identifier">ordering</span>,<span class="ruby-ivar">@title_header</span> = {<span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:title</span>}, <span class="ruby-string">'hilite'</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-string">'release_date'</span>
+    <span class="ruby-identifier">ordering</span>,<span class="ruby-ivar">@date_header</span> = {<span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">:release_date</span>}, <span class="ruby-string">'hilite'</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@all_ratings</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">all_ratings</span>
+  <span class="ruby-ivar">@selected_ratings</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:ratings</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:ratings</span>] <span class="ruby-operator">||</span> {}
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:sort</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:sort</span>]
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:sort</span>] = <span class="ruby-identifier">sort</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:sort</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sort</span>, <span class="ruby-value">:ratings</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@selected_ratings</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:ratings</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">session</span>[<span class="ruby-value">:ratings</span>] <span class="ruby-keyword">and</span> <span class="ruby-ivar">@selected_ratings</span> <span class="ruby-operator">!=</span> {}
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:sort</span>] = <span class="ruby-identifier">sort</span>
+    <span class="ruby-identifier">session</span>[<span class="ruby-value">:ratings</span>] = <span class="ruby-ivar">@selected_ratings</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-value">:sort</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sort</span>, <span class="ruby-value">:ratings</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@selected_ratings</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-ivar">@movies</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find_all_by_rating</span>(<span class="ruby-ivar">@selected_ratings</span>.<span class="ruby-identifier">keys</span>, <span class="ruby-identifier">ordering</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-movie_add" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">movie_add</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="movie_add-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">movie_add</span>
+
+  <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-node">&quot;========#{tmdbmovie.name}=============&quot;</span>)
+<span class="ruby-comment">#  render :nothing =&gt; true</span>
+
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- movie_add-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- movie_add-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-comment"># default: render 'new' template</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-search_tmdb" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">search_tmdb</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="search_tmdb-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 86</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">search_tmdb</span>
+    <span class="ruby-constant">Tmdb</span>.<span class="ruby-identifier">api_key</span> = <span class="ruby-string">&quot;f0e3f36631f1fbb66d480a4b646b1993&quot;</span>
+    <span class="ruby-constant">Tmdb</span>.<span class="ruby-identifier">default_language</span> = <span class="ruby-string">&quot;en&quot;</span>
+    <span class="ruby-ivar">@tmdbmovies</span> = <span class="ruby-constant">TmdbMovie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-value">:title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:search_terms</span>],<span class="ruby-value">:expand_results</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">false</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- search_tmdb-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- search_tmdb-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 3</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+   <span class="ruby-keyword">begin</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>] <span class="ruby-comment"># retrieve movie ID from URI route</span>
+    <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
+    <span class="ruby-ivar">@director</span> = <span class="ruby-ivar">@movie</span>.<span class="ruby-identifier">director</span>
+   <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ActiveRecord</span><span class="ruby-operator">::</span><span class="ruby-constant">RecordNotFound</span>
+<span class="ruby-comment">#     return flash[:warning] = 'Review must be for an existing movie.'</span>
+     <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+    <span class="ruby-keyword">end</span>
+ <span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-similar" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">similar</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="similar-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 102</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">similar</span>
+  <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:movie_id</span>]
+  <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find</span>(<span class="ruby-ivar">@id</span>)
+  <span class="ruby-ivar">@director</span> = <span class="ruby-ivar">@movie</span>.<span class="ruby-identifier">director</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-ivar">@director</span>.<span class="ruby-identifier">blank?</span>
+    <span class="ruby-ivar">@movies</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">similar_directors</span>(<span class="ruby-ivar">@director</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;'#{@movie.title}' has no director info&quot;</span>
+    <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- similar-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- similar-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/movies_controller.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+ <span class="ruby-keyword">if</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:commit</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'Cancel'</span>
+   <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movies_path</span>
+ <span class="ruby-keyword">else</span>
+  <span class="ruby-ivar">@movie</span> = <span class="ruby-constant">Movie</span>.<span class="ruby-identifier">find</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>]
+  <span class="ruby-ivar">@movie</span>.<span class="ruby-identifier">update_attributes!</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:movie</span>])
+  <span class="ruby-identifier">flash</span>[<span class="ruby-value">:notice</span>] = <span class="ruby-node">&quot;#{@movie.title} was successfully updated.&quot;</span>
+  <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">movie_path</span>(<span class="ruby-ivar">@movie</span>)
+ <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
